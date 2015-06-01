@@ -1,35 +1,53 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- */
 'use strict';
 
 var React = require('react-native');
 var {
     AppRegistry,
+    TabBarIOS,
     StyleSheet,
     Text,
     View,
-    } = React;xs
+    Component
+    } = React;
 
-var Keys = React.createClass({
-    render: function () {
+class Keys extends Component {
+    render() {
         return (
-            <View style={styles.container}>
-                <Text style={styles.welcome}>
-                    Welcome to React Native!
-                </Text>
-                <Text style={styles.instructions}>
-                    To get started, edit index.ios.js
-                </Text>
-                <Text style={styles.instructions}>
-                    Press Cmd+R to reload,{'\n'}
-                    Cmd+D or shake for dev menu
-                </Text>
-            </View>
-        );
+            <TabBarIOS>
+                <TabBarIOS.Item title="Local Keys" selected={true}>
+                    <View style={styles.container}>
+                        <Text style={styles.welcome}>
+                            Welcome to React Native!
+                        </Text>
+                        <Text style={styles.instructions}>
+                            To get started, edit index.ios.js
+                        </Text>
+                        <Text style={styles.instructions}>
+                            Press Cmd+R to reload,{'\n'}
+                            Cmd+D or shake for dev menu
+                        </Text>
+                    </View>
+                </TabBarIOS.Item>
+                <TabBarIOS.Item title="Explore" selected={false}>
+                    <View style={styles.container}>
+                        <Text style={styles.instructions}>
+                            Press Cmd+R to reload,{'\n'}
+                            Cmd+D or shake for dev menu
+                        </Text>
+                    </View>
+                </TabBarIOS.Item>
+                <TabBarIOS.Item title="Settings" selected={false}>
+                    <View style={styles.container}>
+                        <Text style={styles.instructions}>
+                            Press Cmd+R to reload,{'\n'}
+                            Cmd+D or shake for dev menu
+                        </Text>
+                    </View>
+                </TabBarIOS.Item>
+            </TabBarIOS>)
     }
-});
+}
+
 
 var styles = StyleSheet.create({
     container: {
