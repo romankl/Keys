@@ -1,6 +1,11 @@
 'use strict';
 
 var React = require('react-native');
+
+var Settings = require('./settings.ios');
+var Explore = require('./explore.ios');
+var LocalKeys = require('./local.ios');
+
 var {
     AppRegistry,
     TabBarIOS,
@@ -10,39 +15,39 @@ var {
     Component
     } = React;
 
+
 class Keys extends Component {
+    constructor(properties) {
+        super(properties);
+
+        this.state = {
+            currentTab: 'local'
+        };
+    }
+
     render() {
         return (
             <TabBarIOS>
-                <TabBarIOS.Item title="Local Keys" selected={true}>
-                    <View style={styles.container}>
-                        <Text style={styles.welcome}>
-                            Welcome to React Native!
-                        </Text>
-                        <Text style={styles.instructions}>
-                            To get started, edit index.ios.js
-                        </Text>
-                        <Text style={styles.instructions}>
-                            Press Cmd+R to reload,{'\n'}
-                            Cmd+D or shake for dev menu
-                        </Text>
-                    </View>
+                <TabBarIOS.Item title='Local Keys'
+                                selected={this.state.currentTab === 'local'}
+                                onPress={() => {
+                this.setState({currentTab : 'local'});
+                }}>
+                    <LocalKeys/>
                 </TabBarIOS.Item>
-                <TabBarIOS.Item title="Explore" selected={false}>
-                    <View style={styles.container}>
-                        <Text style={styles.instructions}>
-                            Press Cmd+R to reload,{'\n'}
-                            Cmd+D or shake for dev menu
-                        </Text>
-                    </View>
+                <TabBarIOS.Item title='Explore'
+                                selected={this.state.currentTab === 'explore'}
+                                onPress={() => {
+                this.setState({currentTab : 'explore'});
+                }}>
+                    <Explore/>
                 </TabBarIOS.Item>
-                <TabBarIOS.Item title="Settings" selected={false}>
-                    <View style={styles.container}>
-                        <Text style={styles.instructions}>
-                            Press Cmd+R to reload,{'\n'}
-                            Cmd+D or shake for dev menu
-                        </Text>
-                    </View>
+                <TabBarIOS.Item title='Settings'
+                                selected={this.state.currentTab === 'settings'}
+                                onPress={() => {
+                this.setState({currentTab : 'settings'});
+                }}>
+                    <Settings/>
                 </TabBarIOS.Item>
             </TabBarIOS>)
     }
