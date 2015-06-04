@@ -14,6 +14,7 @@
 		30B0DEB61B1F8AD30086FF3F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30B0DEB51B1F8AD30086FF3F /* Images.xcassets */; };
 		30B0DEB91B1F8AD30086FF3F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30B0DEB71B1F8AD30086FF3F /* LaunchScreen.xib */; };
 		30B0DEC51B1F8AD30086FF3F /* KeysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0DEC41B1F8AD30086FF3F /* KeysTests.swift */; };
+		30FEBFF71B20EED90046D8B7 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FEBFF61B20EED90046D8B7 /* Key.swift */; };
 		C736B0F9598D1875834194AE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 667D327764363BED19F979E3 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		30B0DEBE1B1F8AD30086FF3F /* KeysTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeysTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30B0DEC31B1F8AD30086FF3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30B0DEC41B1F8AD30086FF3F /* KeysTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysTests.swift; sourceTree = "<group>"; };
+		30FEBFF61B20EED90046D8B7 /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		667D327764363BED19F979E3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B8DE305EAE073D0ED9554C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +88,7 @@
 		30B0DEA81B1F8AD20086FF3F /* Keys */ = {
 			isa = PBXGroup;
 			children = (
+				30FEBFF61B20EED90046D8B7 /* Key.swift */,
 				30B0DEAB1B1F8AD20086FF3F /* AppDelegate.swift */,
 				30B0DEB01B1F8AD30086FF3F /* ViewController.swift */,
 				30B0DEB21B1F8AD30086FF3F /* Main.storyboard */,
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30B0DEB11B1F8AD30086FF3F /* ViewController.swift in Sources */,
+				30FEBFF71B20EED90046D8B7 /* Key.swift in Sources */,
 				30B0DEAC1B1F8AD20086FF3F /* AppDelegate.swift in Sources */,
 				30B0DEAF1B1F8AD20086FF3F /* Keys.xcdatamodeld in Sources */,
 			);
