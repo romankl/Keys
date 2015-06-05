@@ -2,13 +2,23 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Key" representedClassName="PRODUCT_MODULE_NAME.Key" syncable="YES">
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="fingerprint" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fingerprint" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="originId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="originPrimaryPicture" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="originUsername" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="owner" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="owner" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="validTill" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="Remote" representedClassName="PRODUCT_MODULE_NAME.Remote" syncable="YES">
+        <attribute name="bio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fingerprint" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="fullname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="publickey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Key" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="Key" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="Remote" positionX="-63" positionY="27" width="128" height="135"/>
     </elements>
 </model>
