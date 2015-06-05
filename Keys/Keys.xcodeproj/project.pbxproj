@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		300991571B21C11100C9C4DF /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300991561B21C11100C9C4DF /* Key.swift */; };
 		300991591B21C20800C9C4DF /* LocalKeyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300991581B21C20800C9C4DF /* LocalKeyTableViewController.swift */; };
 		3009915B1B21C2CC00C9C4DF /* ExploreKeysTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009915A1B21C2CC00C9C4DF /* ExploreKeysTableViewController.swift */; };
 		3009915D1B21C4A500C9C4DF /* LocalKeyDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009915C1B21C4A500C9C4DF /* LocalKeyDetailTableViewController.swift */; };
 		3009915F1B21CABD00C9C4DF /* ROKTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009915E1B21CABD00C9C4DF /* ROKTextView.swift */; };
 		300991641B21CED700C9C4DF /* BaseFetchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 300991631B21CED700C9C4DF /* BaseFetchController.m */; };
-		300991671B21D3F500C9C4DF /* Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300991661B21D3F500C9C4DF /* Remote.swift */; };
+		3009916E1B21D5BC00C9C4DF /* LocalKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009916D1B21D5BC00C9C4DF /* LocalKey.swift */; };
+		300991701B21D85900C9C4DF /* AllLocalKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009916F1B21D85900C9C4DF /* AllLocalKeys.swift */; };
+		300991731B21DC2300C9C4DF /* Key.m in Sources */ = {isa = PBXBuildFile; fileRef = 300991721B21DC2300C9C4DF /* Key.m */; };
+		300991761B21DC2300C9C4DF /* Remote.m in Sources */ = {isa = PBXBuildFile; fileRef = 300991751B21DC2300C9C4DF /* Remote.m */; };
+		300991781B21E13200C9C4DF /* LocalKeyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300991771B21E13200C9C4DF /* LocalKeyTableViewCell.swift */; };
 		30B0DEAC1B1F8AD20086FF3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0DEAB1B1F8AD20086FF3F /* AppDelegate.swift */; };
 		30B0DEAF1B1F8AD20086FF3F /* Keys.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30B0DEAD1B1F8AD20086FF3F /* Keys.xcdatamodeld */; };
 		30B0DEB41B1F8AD30086FF3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30B0DEB21B1F8AD30086FF3F /* Main.storyboard */; };
@@ -35,7 +38,6 @@
 
 /* Begin PBXFileReference section */
 		27248366C5E24BAFBA43E0A2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		300991561B21C11100C9C4DF /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		300991581B21C20800C9C4DF /* LocalKeyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalKeyTableViewController.swift; sourceTree = "<group>"; };
 		3009915A1B21C2CC00C9C4DF /* ExploreKeysTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreKeysTableViewController.swift; sourceTree = "<group>"; };
 		3009915C1B21C4A500C9C4DF /* LocalKeyDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalKeyDetailTableViewController.swift; sourceTree = "<group>"; };
@@ -43,7 +45,13 @@
 		300991621B21CED700C9C4DF /* Keys-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Keys-Bridging-Header.h"; sourceTree = "<group>"; };
 		300991631B21CED700C9C4DF /* BaseFetchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseFetchController.m; sourceTree = "<group>"; };
 		300991651B21CEE200C9C4DF /* BaseFetchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseFetchController.h; sourceTree = "<group>"; };
-		300991661B21D3F500C9C4DF /* Remote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Remote.swift; sourceTree = "<group>"; };
+		3009916D1B21D5BC00C9C4DF /* LocalKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalKey.swift; sourceTree = "<group>"; };
+		3009916F1B21D85900C9C4DF /* AllLocalKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllLocalKeys.swift; sourceTree = "<group>"; };
+		300991711B21DC2300C9C4DF /* Key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Key.h; sourceTree = "<group>"; };
+		300991721B21DC2300C9C4DF /* Key.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Key.m; sourceTree = "<group>"; };
+		300991741B21DC2300C9C4DF /* Remote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Remote.h; sourceTree = "<group>"; };
+		300991751B21DC2300C9C4DF /* Remote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Remote.m; sourceTree = "<group>"; };
+		300991771B21E13200C9C4DF /* LocalKeyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalKeyTableViewCell.swift; sourceTree = "<group>"; };
 		30B0DEA61B1F8AD20086FF3F /* Keys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30B0DEAA1B1F8AD20086FF3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30B0DEAB1B1F8AD20086FF3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +95,45 @@
 			name = base;
 			sourceTree = "<group>";
 		};
+		300991691B21D49600C9C4DF /* local */ = {
+			isa = PBXGroup;
+			children = (
+				300991581B21C20800C9C4DF /* LocalKeyTableViewController.swift */,
+				3009915C1B21C4A500C9C4DF /* LocalKeyDetailTableViewController.swift */,
+			);
+			name = local;
+			sourceTree = "<group>";
+		};
+		3009916A1B21D49F00C9C4DF /* view */ = {
+			isa = PBXGroup;
+			children = (
+				3009915E1B21CABD00C9C4DF /* ROKTextView.swift */,
+				300991771B21E13200C9C4DF /* LocalKeyTableViewCell.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		3009916B1B21D4A600C9C4DF /* remote */ = {
+			isa = PBXGroup;
+			children = (
+				3009915A1B21C2CC00C9C4DF /* ExploreKeysTableViewController.swift */,
+			);
+			name = remote;
+			sourceTree = "<group>";
+		};
+		3009916C1B21D5A100C9C4DF /* model */ = {
+			isa = PBXGroup;
+			children = (
+				300991741B21DC2300C9C4DF /* Remote.h */,
+				300991751B21DC2300C9C4DF /* Remote.m */,
+				300991711B21DC2300C9C4DF /* Key.h */,
+				300991721B21DC2300C9C4DF /* Key.m */,
+				3009916D1B21D5BC00C9C4DF /* LocalKey.swift */,
+				3009916F1B21D85900C9C4DF /* AllLocalKeys.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		30B0DE9D1B1F8AD20086FF3F = {
 			isa = PBXGroup;
 			children = (
@@ -110,18 +157,16 @@
 		30B0DEA81B1F8AD20086FF3F /* Keys */ = {
 			isa = PBXGroup;
 			children = (
-				300991661B21D3F500C9C4DF /* Remote.swift */,
-				300991561B21C11100C9C4DF /* Key.swift */,
+				3009916C1B21D5A100C9C4DF /* model */,
 				30B0DEAB1B1F8AD20086FF3F /* AppDelegate.swift */,
 				30B0DEB21B1F8AD30086FF3F /* Main.storyboard */,
 				30B0DEB51B1F8AD30086FF3F /* Images.xcassets */,
 				30B0DEB71B1F8AD30086FF3F /* LaunchScreen.xib */,
 				30B0DEAD1B1F8AD20086FF3F /* Keys.xcdatamodeld */,
 				30B0DEA91B1F8AD20086FF3F /* Supporting Files */,
-				300991581B21C20800C9C4DF /* LocalKeyTableViewController.swift */,
-				3009915A1B21C2CC00C9C4DF /* ExploreKeysTableViewController.swift */,
-				3009915C1B21C4A500C9C4DF /* LocalKeyDetailTableViewController.swift */,
-				3009915E1B21CABD00C9C4DF /* ROKTextView.swift */,
+				300991691B21D49600C9C4DF /* local */,
+				3009916B1B21D4A600C9C4DF /* remote */,
+				3009916A1B21D49F00C9C4DF /* view */,
 				300991681B21D40300C9C4DF /* base */,
 			);
 			path = Keys;
@@ -305,14 +350,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3009915F1B21CABD00C9C4DF /* ROKTextView.swift in Sources */,
+				300991781B21E13200C9C4DF /* LocalKeyTableViewCell.swift in Sources */,
+				3009916E1B21D5BC00C9C4DF /* LocalKey.swift in Sources */,
 				3009915D1B21C4A500C9C4DF /* LocalKeyDetailTableViewController.swift in Sources */,
-				300991671B21D3F500C9C4DF /* Remote.swift in Sources */,
+				300991701B21D85900C9C4DF /* AllLocalKeys.swift in Sources */,
+				300991761B21DC2300C9C4DF /* Remote.m in Sources */,
 				300991641B21CED700C9C4DF /* BaseFetchController.m in Sources */,
-				300991571B21C11100C9C4DF /* Key.swift in Sources */,
 				300991591B21C20800C9C4DF /* LocalKeyTableViewController.swift in Sources */,
 				30B0DEAC1B1F8AD20086FF3F /* AppDelegate.swift in Sources */,
 				3009915B1B21C2CC00C9C4DF /* ExploreKeysTableViewController.swift in Sources */,
 				30B0DEAF1B1F8AD20086FF3F /* Keys.xcdatamodeld in Sources */,
+				300991731B21DC2300C9C4DF /* Key.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

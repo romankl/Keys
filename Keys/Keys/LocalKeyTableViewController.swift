@@ -10,6 +10,12 @@ import UIKit
 
 class LocalKeyTableViewController: BaseFetchController {
 
+    struct constants {
+        static let reuseIdentifier = "keyCell"
+        static let detailSegue = "detailKey"
+        static let newSegue = "newKey"
+    }
+
     private var context: NSManagedObjectContext {
         var delegate = UIApplication.sharedApplication().delegate as! AppDelegate
         return delegate.managedObjectContext!
@@ -18,6 +24,13 @@ class LocalKeyTableViewController: BaseFetchController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let all = AllLocalKeys(context: context)
+        let request = all.requestForAllFetching()
+
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: request,
+                                                              managedObjectContext: context,
+                                                              sectionNameKeyPath: nil,
+                                                              cacheName: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,15 +38,16 @@ class LocalKeyTableViewController: BaseFetchController {
         // Dispose of any resources that can be recreated.
     }
 
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
 
-        // Configure the cell...
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(constants.reuseIdentifier, forIndexPath: indexPath) as! LocalKeyTableViewCell
+        let item = fetchedResultsController.objectAtIndexPath(indexPath) as! Key
+        cell.title.text = item.owner
+        cell.fingerprint.text = item.fingerprint
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -72,14 +86,12 @@ class LocalKeyTableViewController: BaseFetchController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == constants.detailSegue {
+            let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
+            let detailKey = fetchedResultsController.objectAtIndexPath(indexPath!) as! Key
+            let detailController = segue.destinationViewController as! LocalKeyDetailTableViewController
+            detailController.detailKey = detailKey
+        }
     }
-    */
-
 }

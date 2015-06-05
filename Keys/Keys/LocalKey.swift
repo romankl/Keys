@@ -22,16 +22,32 @@ class LocalKey: NSObject {
     }
 
 
-    func save(context: NSManagedObjectContext) -> Bool {
+    func insert(context: NSManagedObjectContext) -> Bool {
         let key = NSEntityDescription.insertNewObjectForEntityForName("Key", inManagedObjectContext: context) as! Key
         key.fingerprint = fingerprint
         key.owner = owner
-        key.content = fingerprint
+        key.content = content
         key.validTill = expireDate
 
         var error: NSError?
         if !context.save(&error) {
             println("Error while creation of new key: \(error)")
+            return false
+        }
+
+        return true
+    }
+
+
+    func update(key: Key, context: NSManagedObjectContext) -> Bool {
+        key.fingerprint = fingerprint
+        key.owner = owner
+        key.validTill = expireDate
+        key.content = content
+
+        var error: NSError?
+        if !context.save(&error) {
+            println("Error while updating existing key \(error)")
             return false
         }
 

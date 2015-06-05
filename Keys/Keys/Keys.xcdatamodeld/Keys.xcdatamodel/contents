@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Key" representedClassName="PRODUCT_MODULE_NAME.Key" syncable="YES">
+    <entity name="Key" representedClassName="Key" syncable="YES">
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fingerprint" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="originId" optional="YES" attributeType="String" syncable="YES"/>
@@ -9,7 +9,7 @@
         <attribute name="owner" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="validTill" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
-    <entity name="Remote" representedClassName="PRODUCT_MODULE_NAME.Remote" syncable="YES">
+    <entity name="Remote" representedClassName="Remote" syncable="YES">
         <attribute name="bio" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="cachedAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="fingerprint" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
