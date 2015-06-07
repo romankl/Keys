@@ -17,8 +17,10 @@
 		300991731B21DC2300C9C4DF /* Key.m in Sources */ = {isa = PBXBuildFile; fileRef = 300991721B21DC2300C9C4DF /* Key.m */; };
 		300991761B21DC2300C9C4DF /* Remote.m in Sources */ = {isa = PBXBuildFile; fileRef = 300991751B21DC2300C9C4DF /* Remote.m */; };
 		300991781B21E13200C9C4DF /* LocalKeyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300991771B21E13200C9C4DF /* LocalKeyTableViewCell.swift */; };
+		3009B2671B248D8D00679729 /* RemoteUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009B2661B248D8D00679729 /* RemoteUser.swift */; };
+		3009B2691B248DD900679729 /* VerifiedNetworks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009B2681B248DD900679729 /* VerifiedNetworks.swift */; };
 		30AE85791B2314EF0061905E /* RemoteEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE85781B2314EF0061905E /* RemoteEndpoint.swift */; };
-		30AE857B1B2318DA0061905E /* DiscoverEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE857A1B2318DA0061905E /* DiscoverEndpoint.swift */; };
+		30AE857B1B2318DA0061905E /* LookUpEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE857A1B2318DA0061905E /* LookUpEndpoint.swift */; };
 		30AE857D1B23196B0061905E /* EndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE857C1B23196B0061905E /* EndpointProtocol.swift */; };
 		30B0DEAC1B1F8AD20086FF3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0DEAB1B1F8AD20086FF3F /* AppDelegate.swift */; };
 		30B0DEAF1B1F8AD20086FF3F /* Keys.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30B0DEAD1B1F8AD20086FF3F /* Keys.xcdatamodeld */; };
@@ -55,8 +57,10 @@
 		300991741B21DC2300C9C4DF /* Remote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Remote.h; sourceTree = "<group>"; };
 		300991751B21DC2300C9C4DF /* Remote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Remote.m; sourceTree = "<group>"; };
 		300991771B21E13200C9C4DF /* LocalKeyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalKeyTableViewCell.swift; sourceTree = "<group>"; };
+		3009B2661B248D8D00679729 /* RemoteUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteUser.swift; sourceTree = "<group>"; };
+		3009B2681B248DD900679729 /* VerifiedNetworks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifiedNetworks.swift; sourceTree = "<group>"; };
 		30AE85781B2314EF0061905E /* RemoteEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteEndpoint.swift; sourceTree = "<group>"; };
-		30AE857A1B2318DA0061905E /* DiscoverEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverEndpoint.swift; sourceTree = "<group>"; };
+		30AE857A1B2318DA0061905E /* LookUpEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookUpEndpoint.swift; sourceTree = "<group>"; };
 		30AE857C1B23196B0061905E /* EndpointProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointProtocol.swift; sourceTree = "<group>"; };
 		30B0DEA61B1F8AD20086FF3F /* Keys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30B0DEAA1B1F8AD20086FF3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -138,7 +142,9 @@
 				3009916F1B21D85900C9C4DF /* AllLocalKeys.swift */,
 				30AE85781B2314EF0061905E /* RemoteEndpoint.swift */,
 				30AE857C1B23196B0061905E /* EndpointProtocol.swift */,
-				30AE857A1B2318DA0061905E /* DiscoverEndpoint.swift */,
+				30AE857A1B2318DA0061905E /* LookUpEndpoint.swift */,
+				3009B2661B248D8D00679729 /* RemoteUser.swift */,
+				3009B2681B248DD900679729 /* VerifiedNetworks.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -359,17 +365,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				30AE85791B2314EF0061905E /* RemoteEndpoint.swift in Sources */,
+				3009B2691B248DD900679729 /* VerifiedNetworks.swift in Sources */,
 				3009915F1B21CABD00C9C4DF /* ROKTextView.swift in Sources */,
 				300991781B21E13200C9C4DF /* LocalKeyTableViewCell.swift in Sources */,
 				3009916E1B21D5BC00C9C4DF /* LocalKey.swift in Sources */,
 				3009915D1B21C4A500C9C4DF /* LocalKeyDetailTableViewController.swift in Sources */,
 				300991701B21D85900C9C4DF /* AllLocalKeys.swift in Sources */,
+				3009B2671B248D8D00679729 /* RemoteUser.swift in Sources */,
 				300991761B21DC2300C9C4DF /* Remote.m in Sources */,
 				300991641B21CED700C9C4DF /* BaseFetchController.m in Sources */,
 				300991591B21C20800C9C4DF /* LocalKeyTableViewController.swift in Sources */,
 				30B0DEAC1B1F8AD20086FF3F /* AppDelegate.swift in Sources */,
 				3009915B1B21C2CC00C9C4DF /* ExploreKeysTableViewController.swift in Sources */,
-				30AE857B1B2318DA0061905E /* DiscoverEndpoint.swift in Sources */,
+				30AE857B1B2318DA0061905E /* LookUpEndpoint.swift in Sources */,
 				30AE857D1B23196B0061905E /* EndpointProtocol.swift in Sources */,
 				30B0DEAF1B1F8AD20086FF3F /* Keys.xcdatamodeld in Sources */,
 				300991731B21DC2300C9C4DF /* Key.m in Sources */,

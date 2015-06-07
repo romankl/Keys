@@ -20,7 +20,8 @@ class LocalKeyDetailTableViewController: UITableViewController, UITextFieldDeleg
     }
 
     var detailKey: Key?
-    var completionBlock = {()->() in}
+    var completionBlock = {
+        () -> () in }
 
     @IBOutlet weak var fingerprint: ROKTextView!
     @IBOutlet weak var key: ROKTextView!
@@ -28,7 +29,7 @@ class LocalKeyDetailTableViewController: UITableViewController, UITextFieldDeleg
     @IBOutlet weak var expireDate: UIDatePicker!
 
     var editingKey = false
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

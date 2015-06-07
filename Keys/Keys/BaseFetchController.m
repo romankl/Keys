@@ -1,10 +1,10 @@
-    //
-    //  BaseFetchController.m
-    //  Cocktails
-    //
-    //  Created by Roman Klauke on 02.05.15.
-    //  Copyright (c) 2015 Roman Klauke. All rights reserved.
-    //
+//
+//  BaseFetchController.m
+//  Cocktails
+//
+//  Created by Roman Klauke on 02.05.15.
+//  Copyright (c) 2015 Roman Klauke. All rights reserved.
+//
 
 #import "BaseFetchController.h"
 
@@ -49,8 +49,10 @@
         case NSFetchedResultsChangeDelete:
             [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
             break;
-        case NSFetchedResultsChangeMove:break;
-        case NSFetchedResultsChangeUpdate:break;
+        case NSFetchedResultsChangeMove:
+            break;
+        case NSFetchedResultsChangeUpdate:
+            break;
     }
 }
 

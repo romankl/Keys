@@ -28,9 +28,9 @@ class LocalKeyTableViewController: BaseFetchController, UISearchBarDelegate, UIS
         let request = all.requestForAllFetching()
 
         fetchedResultsController = NSFetchedResultsController(fetchRequest: request,
-                                                              managedObjectContext: context,
-                                                              sectionNameKeyPath: nil,
-                                                              cacheName: nil)
+                managedObjectContext: context,
+                sectionNameKeyPath: nil,
+                cacheName: nil)
     }
 
     override func didReceiveMemoryWarning() {

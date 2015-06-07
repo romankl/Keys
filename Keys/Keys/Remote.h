@@ -12,12 +12,12 @@
 
 @interface Remote : NSManagedObject
 
-@property (nonatomic, retain) NSString * id;
-@property (nonatomic, retain) NSString * username;
-@property (nonatomic, retain) NSString * fullname;
-@property (nonatomic, retain) NSString * bio;
-@property (nonatomic, retain) NSString * fingerprint;
-@property (nonatomic, retain) NSString * publickey;
-@property (nonatomic, retain) NSDate * cachedAt;
+@property(nonatomic, retain) NSString *id;
+@property(nonatomic, retain) NSString *username;
+@property(nonatomic, retain) NSString *fullname;
+@property(nonatomic, retain) NSString *bio;
+@property(nonatomic, retain) NSString *fingerprint;
+@property(nonatomic, retain) NSString *publickey;
+@property(nonatomic, retain) NSDate *cachedAt;
 
 @end

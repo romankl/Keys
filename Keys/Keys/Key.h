@@ -12,12 +12,12 @@
 
 @interface Key : NSManagedObject
 
-@property (nonatomic, retain) NSString * content;
-@property (nonatomic, retain) NSString * fingerprint;
-@property (nonatomic, retain) NSString * originId;
-@property (nonatomic, retain) NSString * originPrimaryPicture;
-@property (nonatomic, retain) NSString * originUsername;
-@property (nonatomic, retain) NSString * owner;
-@property (nonatomic, retain) NSDate * validTill;
+@property(nonatomic, retain) NSString *content;
+@property(nonatomic, retain) NSString *fingerprint;
+@property(nonatomic, retain) NSString *originId;
+@property(nonatomic, retain) NSString *originPrimaryPicture;
+@property(nonatomic, retain) NSString *originUsername;
+@property(nonatomic, retain) NSString *owner;
+@property(nonatomic, retain) NSDate *validTill;
 
 @end
