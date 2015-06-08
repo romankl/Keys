@@ -9,5 +9,5 @@
 import Foundation
 
 protocol EndpointProtocol {
-    func fetch(callback: ((result:AnyObject?, error:NSError?) -> Void), params: NSDictionary)
+    func fetch(callback: ((result:Array<RemoteUser>?, error:NSError?) -> Void), params: NSDictionary)
 }

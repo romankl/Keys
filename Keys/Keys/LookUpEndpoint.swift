@@ -12,11 +12,11 @@ import Foundation
 struct LookUpEndpoint: EndpointProtocol {
 
     /// Fetches the discover endpoint 
-    func fetch(callback: ((result:AnyObject?, error:NSError?) -> Void), params: NSDictionary) {
+    func fetch(callback: ((result:Array<RemoteUser>?, error:NSError?) -> Void), params: NSDictionary) {
         RemoteEndpoint.fetch({
             (operation, fetchResult) -> Void in
             var transformed = self.transform(fetchResult as! NSDictionary)
-            callback(result: transformed as? AnyObject, error: nil) // TODO Change protocol definition
+            callback(result: transformed, error: nil) // TODO Change protocol definition
         }, failure: {
             (operation, failure) -> Void in
             callback(result: nil, error: failure)
