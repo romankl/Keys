@@ -42,18 +42,22 @@ class ExploreKeysTableViewController: UITableViewController {
         return 1
     }
 
+
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
 
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(constants.cellIdentifier, forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(constants.cellIdentifier, forIndexPath: indexPath) as! RemoteKeyCell
         let remoteUser = items[indexPath.row]
-        cell.textLabel?.text = remoteUser.username
+        // cell.textLabel?.text = remoteUser.username
+        cell.thumbnail.setImageWithURL(NSURL(string: remoteUser.thumbnail!))
+        cell.titleLabel.text = remoteUser.fullName
+        cell.subTitleLabel.text = remoteUser.username
 
         return cell
     }
-
 
 
     // Override to support editing the table view.
@@ -65,7 +69,6 @@ class ExploreKeysTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
     }
-
 
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

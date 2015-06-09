@@ -28,6 +28,7 @@
 		30B0DEB61B1F8AD30086FF3F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30B0DEB51B1F8AD30086FF3F /* Images.xcassets */; };
 		30B0DEB91B1F8AD30086FF3F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30B0DEB71B1F8AD30086FF3F /* LaunchScreen.xib */; };
 		30B0DEC51B1F8AD30086FF3F /* KeysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0DEC41B1F8AD30086FF3F /* KeysTests.swift */; };
+		30BFFB191B2762F2002FEC9D /* RemoteKeyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFFB181B2762F2002FEC9D /* RemoteKeyCell.swift */; };
 		C736B0F9598D1875834194AE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 667D327764363BED19F979E3 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		30B0DEBE1B1F8AD30086FF3F /* KeysTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeysTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30B0DEC31B1F8AD30086FF3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30B0DEC41B1F8AD30086FF3F /* KeysTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysTests.swift; sourceTree = "<group>"; };
+		30BFFB181B2762F2002FEC9D /* RemoteKeyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteKeyCell.swift; sourceTree = "<group>"; };
 		667D327764363BED19F979E3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B8DE305EAE073D0ED9554C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +119,7 @@
 		3009916A1B21D49F00C9C4DF /* view */ = {
 			isa = PBXGroup;
 			children = (
+				30BFFB181B2762F2002FEC9D /* RemoteKeyCell.swift */,
 				3009915E1B21CABD00C9C4DF /* ROKTextView.swift */,
 				300991771B21E13200C9C4DF /* LocalKeyTableViewCell.swift */,
 			);
@@ -381,6 +384,7 @@
 				30AE857D1B23196B0061905E /* EndpointProtocol.swift in Sources */,
 				30B0DEAF1B1F8AD20086FF3F /* Keys.xcdatamodeld in Sources */,
 				300991731B21DC2300C9C4DF /* Key.m in Sources */,
+				30BFFB191B2762F2002FEC9D /* RemoteKeyCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
