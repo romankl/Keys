@@ -86,7 +86,7 @@ struct LookUpEndpoint: EndpointProtocol {
             user.verified = services
             user.follows = components["is_followee"]?.boolValue
 
-            if let thumbnail = components["thumbnail"] as? String {
+            if let thumbnail = element["thumbnail"] as? String {
                 user.thumbnail = thumbnail
             }
 
