@@ -270,6 +270,7 @@
                                     <outlet property="subTitleLabel" destination="SXH-YL-pKe" id="6CL-ty-dvF"/>
                                     <outlet property="thumbnail" destination="Kpv-Zc-sIF" id="uoJ-Ju-bsu"/>
                                     <outlet property="titleLabel" destination="2Vd-dS-0Hu" id="OiX-jB-cQ3"/>
+                                    <segue destination="zRR-Bp-Gzy" kind="show" identifier="profileView" id="2LV-jJ-AqG"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -295,6 +296,32 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2839" y="2120"/>
+        </scene>
+        <!--Remote Detail Profile View Table View Controller-->
+        <scene sceneID="NXd-gY-DP9">
+            <objects>
+                <tableViewController id="zRR-Bp-Gzy" customClass="RemoteDetailProfileViewTableViewController" customModule="Keys" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="iPp-EO-Fhh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="userData" id="f8c-OW-cew">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f8c-OW-cew" id="6Zn-GE-oqk">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zRR-Bp-Gzy" id="Db8-eY-a5Z"/>
+                            <outlet property="delegate" destination="zRR-Bp-Gzy" id="PEp-o7-9ZE"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gkN-1C-kNY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3748" y="2120"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZGJ-yG-c7E">

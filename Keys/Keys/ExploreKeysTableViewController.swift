@@ -11,6 +11,7 @@ import UIKit
 class ExploreKeysTableViewController: UITableViewController {
     private struct constants {
         static let cellIdentifier = "remoteKeyCell"
+        static let segueIdentifier = "profileView"
     }
 
     private var items = [RemoteUser]()
@@ -20,8 +21,6 @@ class ExploreKeysTableViewController: UITableViewController {
 
         let endpoint = LookUpEndpoint()
         endpoint.fetch({ (result, error) -> Void in
-            //
-            //self.items = result
             if error != nil {
                 println("Error while fetching \(error)")
                 return
@@ -52,7 +51,7 @@ class ExploreKeysTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(constants.cellIdentifier, forIndexPath: indexPath) as! RemoteKeyCell
         let remoteUser = items[indexPath.row]
         // cell.textLabel?.text = remoteUser.username
-        cell.thumbnail.setImageWithURL(NSURL(string: remoteUser.thumbnail!))
+        cell.thumbnail.setImageWithURL(NSURL(string: remoteUser.thumbnail!), placeholderImage: nil)
         cell.titleLabel.text = remoteUser.fullName
         cell.subTitleLabel.text = remoteUser.username
 
@@ -73,7 +72,10 @@ class ExploreKeysTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == constants.segueIdentifier {
+            let destination = segue.destinationViewController as! RemoteDetailProfileViewTableViewController
+            let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
+            destination.user = items[indexPath!.row] as RemoteUser
+        }
     }
 }

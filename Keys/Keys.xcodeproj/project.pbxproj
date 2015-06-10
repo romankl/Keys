@@ -10,7 +10,6 @@
 		300991591B21C20800C9C4DF /* LocalKeyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300991581B21C20800C9C4DF /* LocalKeyTableViewController.swift */; };
 		3009915B1B21C2CC00C9C4DF /* ExploreKeysTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009915A1B21C2CC00C9C4DF /* ExploreKeysTableViewController.swift */; };
 		3009915D1B21C4A500C9C4DF /* LocalKeyDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009915C1B21C4A500C9C4DF /* LocalKeyDetailTableViewController.swift */; };
-		3009915F1B21CABD00C9C4DF /* ROKTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009915E1B21CABD00C9C4DF /* ROKTextView.swift */; };
 		300991641B21CED700C9C4DF /* BaseFetchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 300991631B21CED700C9C4DF /* BaseFetchController.m */; };
 		3009916E1B21D5BC00C9C4DF /* LocalKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009916D1B21D5BC00C9C4DF /* LocalKey.swift */; };
 		300991701B21D85900C9C4DF /* AllLocalKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009916F1B21D85900C9C4DF /* AllLocalKeys.swift */; };
@@ -19,6 +18,8 @@
 		300991781B21E13200C9C4DF /* LocalKeyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300991771B21E13200C9C4DF /* LocalKeyTableViewCell.swift */; };
 		3009B2671B248D8D00679729 /* RemoteUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009B2661B248D8D00679729 /* RemoteUser.swift */; };
 		3009B2691B248DD900679729 /* VerifiedNetworks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009B2681B248DD900679729 /* VerifiedNetworks.swift */; };
+		303375641B28B0560007A97E /* ROKTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303375631B28B0560007A97E /* ROKTextView.swift */; };
+		303375661B28BD3A0007A97E /* RemoteDetailProfileViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303375651B28BD3A0007A97E /* RemoteDetailProfileViewTableViewController.swift */; };
 		30AE85791B2314EF0061905E /* RemoteEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE85781B2314EF0061905E /* RemoteEndpoint.swift */; };
 		30AE857B1B2318DA0061905E /* LookUpEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE857A1B2318DA0061905E /* LookUpEndpoint.swift */; };
 		30AE857D1B23196B0061905E /* EndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE857C1B23196B0061905E /* EndpointProtocol.swift */; };
@@ -47,7 +48,6 @@
 		300991581B21C20800C9C4DF /* LocalKeyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalKeyTableViewController.swift; sourceTree = "<group>"; };
 		3009915A1B21C2CC00C9C4DF /* ExploreKeysTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreKeysTableViewController.swift; sourceTree = "<group>"; };
 		3009915C1B21C4A500C9C4DF /* LocalKeyDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalKeyDetailTableViewController.swift; sourceTree = "<group>"; };
-		3009915E1B21CABD00C9C4DF /* ROKTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROKTextView.swift; sourceTree = "<group>"; };
 		300991621B21CED700C9C4DF /* Keys-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Keys-Bridging-Header.h"; sourceTree = "<group>"; };
 		300991631B21CED700C9C4DF /* BaseFetchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseFetchController.m; sourceTree = "<group>"; };
 		300991651B21CEE200C9C4DF /* BaseFetchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseFetchController.h; sourceTree = "<group>"; };
@@ -60,6 +60,8 @@
 		300991771B21E13200C9C4DF /* LocalKeyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalKeyTableViewCell.swift; sourceTree = "<group>"; };
 		3009B2661B248D8D00679729 /* RemoteUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteUser.swift; sourceTree = "<group>"; };
 		3009B2681B248DD900679729 /* VerifiedNetworks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifiedNetworks.swift; sourceTree = "<group>"; };
+		303375631B28B0560007A97E /* ROKTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROKTextView.swift; sourceTree = "<group>"; };
+		303375651B28BD3A0007A97E /* RemoteDetailProfileViewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteDetailProfileViewTableViewController.swift; sourceTree = "<group>"; };
 		30AE85781B2314EF0061905E /* RemoteEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteEndpoint.swift; sourceTree = "<group>"; };
 		30AE857A1B2318DA0061905E /* LookUpEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookUpEndpoint.swift; sourceTree = "<group>"; };
 		30AE857C1B23196B0061905E /* EndpointProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointProtocol.swift; sourceTree = "<group>"; };
@@ -119,8 +121,8 @@
 		3009916A1B21D49F00C9C4DF /* view */ = {
 			isa = PBXGroup;
 			children = (
+				303375631B28B0560007A97E /* ROKTextView.swift */,
 				30BFFB181B2762F2002FEC9D /* RemoteKeyCell.swift */,
-				3009915E1B21CABD00C9C4DF /* ROKTextView.swift */,
 				300991771B21E13200C9C4DF /* LocalKeyTableViewCell.swift */,
 			);
 			name = view;
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				3009915A1B21C2CC00C9C4DF /* ExploreKeysTableViewController.swift */,
+				303375651B28BD3A0007A97E /* RemoteDetailProfileViewTableViewController.swift */,
 			);
 			name = remote;
 			sourceTree = "<group>";
@@ -367,9 +370,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				303375641B28B0560007A97E /* ROKTextView.swift in Sources */,
 				30AE85791B2314EF0061905E /* RemoteEndpoint.swift in Sources */,
 				3009B2691B248DD900679729 /* VerifiedNetworks.swift in Sources */,
-				3009915F1B21CABD00C9C4DF /* ROKTextView.swift in Sources */,
 				300991781B21E13200C9C4DF /* LocalKeyTableViewCell.swift in Sources */,
 				3009916E1B21D5BC00C9C4DF /* LocalKey.swift in Sources */,
 				3009915D1B21C4A500C9C4DF /* LocalKeyDetailTableViewController.swift in Sources */,
@@ -382,6 +385,7 @@
 				3009915B1B21C2CC00C9C4DF /* ExploreKeysTableViewController.swift in Sources */,
 				30AE857B1B2318DA0061905E /* LookUpEndpoint.swift in Sources */,
 				30AE857D1B23196B0061905E /* EndpointProtocol.swift in Sources */,
+				303375661B28BD3A0007A97E /* RemoteDetailProfileViewTableViewController.swift in Sources */,
 				30B0DEAF1B1F8AD20086FF3F /* Keys.xcdatamodeld in Sources */,
 				300991731B21DC2300C9C4DF /* Key.m in Sources */,
 				30BFFB191B2762F2002FEC9D /* RemoteKeyCell.swift in Sources */,
