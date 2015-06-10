@@ -70,6 +70,7 @@ struct LookUpEndpoint: EndpointProtocol {
             }
 
             if let websites = components["websites"] as? NSArray {
+                var sites = [VerifiedNetworks]()
                 for website in websites {
 
                     let webProtocol = website["protocol"] as! String
@@ -80,10 +81,12 @@ struct LookUpEndpoint: EndpointProtocol {
                         type = VerifiedNetworks.NetworkType.Https
                     }
                     let service = VerifiedNetworks(type: type, username: website["val"] as! String)
-                    services.append(service)
+                    sites.append(service)
                 }
+                user.websites = sites
             }
-            user.verified = services
+
+            user.socialNetworks = services
             user.follows = components["is_followee"]?.boolValue
 
             if let thumbnail = element["thumbnail"] as? String {

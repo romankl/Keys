@@ -14,7 +14,8 @@ struct RemoteUser {
     var bio: String?
     var fingerprint: String?
     var publicKey: String?
-    var verified: [VerifiedNetworks]?
+    var socialNetworks: [VerifiedNetworks]?
+    var websites: [VerifiedNetworks]?
     var follows: Bool?
     var thumbnail: String?
 }
