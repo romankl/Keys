@@ -15,13 +15,26 @@ class RemoteDetailProfileViewTableViewController: UITableViewController {
 
     var user: RemoteUser!
 
+    private var profileHeaderImage: ProfileHeaderImageView!
+    private var image = UIImage()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        profileHeaderImage = ProfileHeaderImageView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 220))
+        profileHeaderImage.thumbnailUrl = user.thumbnail!
+        profileHeaderImage.username.text = user.fullName
+
+        tableView.tableHeaderView = profileHeaderImage
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
     }
 
     // MARK: - Table view data source

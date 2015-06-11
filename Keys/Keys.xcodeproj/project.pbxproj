@@ -20,6 +20,8 @@
 		3009B2691B248DD900679729 /* VerifiedNetworks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009B2681B248DD900679729 /* VerifiedNetworks.swift */; };
 		303375641B28B0560007A97E /* ROKTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303375631B28B0560007A97E /* ROKTextView.swift */; };
 		303375661B28BD3A0007A97E /* RemoteDetailProfileViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303375651B28BD3A0007A97E /* RemoteDetailProfileViewTableViewController.swift */; };
+		303A030B1B2A1257005EB9FD /* ProfileHeaderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303A030A1B2A1257005EB9FD /* ProfileHeaderImageView.swift */; };
+		303A030D1B2A13FC005EB9FD /* ProfileHeaderImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 303A030C1B2A13FC005EB9FD /* ProfileHeaderImageView.xib */; };
 		30AE85791B2314EF0061905E /* RemoteEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE85781B2314EF0061905E /* RemoteEndpoint.swift */; };
 		30AE857B1B2318DA0061905E /* LookUpEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE857A1B2318DA0061905E /* LookUpEndpoint.swift */; };
 		30AE857D1B23196B0061905E /* EndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE857C1B23196B0061905E /* EndpointProtocol.swift */; };
@@ -62,6 +64,8 @@
 		3009B2681B248DD900679729 /* VerifiedNetworks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifiedNetworks.swift; sourceTree = "<group>"; };
 		303375631B28B0560007A97E /* ROKTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROKTextView.swift; sourceTree = "<group>"; };
 		303375651B28BD3A0007A97E /* RemoteDetailProfileViewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteDetailProfileViewTableViewController.swift; sourceTree = "<group>"; };
+		303A030A1B2A1257005EB9FD /* ProfileHeaderImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderImageView.swift; sourceTree = "<group>"; };
+		303A030C1B2A13FC005EB9FD /* ProfileHeaderImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileHeaderImageView.xib; sourceTree = "<group>"; };
 		30AE85781B2314EF0061905E /* RemoteEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteEndpoint.swift; sourceTree = "<group>"; };
 		30AE857A1B2318DA0061905E /* LookUpEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookUpEndpoint.swift; sourceTree = "<group>"; };
 		30AE857C1B23196B0061905E /* EndpointProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointProtocol.swift; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 				303375631B28B0560007A97E /* ROKTextView.swift */,
 				30BFFB181B2762F2002FEC9D /* RemoteKeyCell.swift */,
 				300991771B21E13200C9C4DF /* LocalKeyTableViewCell.swift */,
+				303A030A1B2A1257005EB9FD /* ProfileHeaderImageView.swift */,
+				303A030C1B2A13FC005EB9FD /* ProfileHeaderImageView.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -320,6 +326,7 @@
 				30B0DEB41B1F8AD30086FF3F /* Main.storyboard in Resources */,
 				30B0DEB91B1F8AD30086FF3F /* LaunchScreen.xib in Resources */,
 				30B0DEB61B1F8AD30086FF3F /* Images.xcassets in Resources */,
+				303A030D1B2A13FC005EB9FD /* ProfileHeaderImageView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +380,7 @@
 				303375641B28B0560007A97E /* ROKTextView.swift in Sources */,
 				30AE85791B2314EF0061905E /* RemoteEndpoint.swift in Sources */,
 				3009B2691B248DD900679729 /* VerifiedNetworks.swift in Sources */,
+				303A030B1B2A1257005EB9FD /* ProfileHeaderImageView.swift in Sources */,
 				300991781B21E13200C9C4DF /* LocalKeyTableViewCell.swift in Sources */,
 				3009916E1B21D5BC00C9C4DF /* LocalKey.swift in Sources */,
 				3009915D1B21C4A500C9C4DF /* LocalKeyDetailTableViewController.swift in Sources */,

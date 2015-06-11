@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct RemoteUser {
+class RemoteUser {
     var username: String?
     var fullName: String?
     var bio: String?
