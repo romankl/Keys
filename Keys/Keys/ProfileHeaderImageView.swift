@@ -29,8 +29,6 @@ class ProfileHeaderImageView: UIView {
     }
 
     @IBOutlet weak var username: UILabel!
-    var visualEffectView: UIVisualEffectView!
-
     override init(frame: CGRect) {
         super.init(frame: frame)
 
@@ -47,7 +45,7 @@ class ProfileHeaderImageView: UIView {
 
         // Blur the background image
         let blur = UIBlurEffect(style: .Dark)
-        visualEffectView = UIVisualEffectView(effect: blur)
+        let visualEffectView = UIVisualEffectView(effect: blur)
         visualEffectView.frame = frame
         backgroundImage.addSubview(visualEffectView)
     }

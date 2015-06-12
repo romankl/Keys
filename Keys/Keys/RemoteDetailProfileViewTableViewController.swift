@@ -28,14 +28,6 @@ class RemoteDetailProfileViewTableViewController: UITableViewController {
         tableView.tableHeaderView = profileHeaderImage
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-    }
 
     // MARK: - Table view data source
 
