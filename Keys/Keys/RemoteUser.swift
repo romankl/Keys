@@ -18,4 +18,5 @@ class RemoteUser {
     var websites: Array<VerifiedNetworks>!
     var follows: Bool?
     var thumbnail: String?
+    var uid: String?
 }

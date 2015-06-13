@@ -86,8 +86,14 @@ struct LookUpEndpoint: EndpointProtocol {
                 user.websites = sites
             }
 
+
+            if let fingerprint = components["key_fingerprint"] as? NSDictionary {
+                user.fingerprint = fingerprint["val"] as? String
+            }
+
             user.socialNetworks = services
             user.follows = components["is_followee"]?.boolValue
+            user.uid = element["uid"] as? String
 
             if let thumbnail = element["thumbnail"] as? String {
                 user.thumbnail = thumbnail

@@ -133,6 +133,8 @@ class RemoteDetailProfileViewTableViewController: UITableViewController {
         }
 
         newKey.owner = user.fullName
+        newKey.originId = user.uid
+
 
         if let thumbnail = user.thumbnail {
             newKey.originPrimaryPicture = thumbnail
