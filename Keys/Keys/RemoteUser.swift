@@ -14,8 +14,8 @@ class RemoteUser {
     var bio: String?
     var fingerprint: String?
     var publicKey: String?
-    var socialNetworks: [VerifiedNetworks]?
-    var websites: [VerifiedNetworks]?
+    var socialNetworks: Array<VerifiedNetworks>?
+    var websites: Array<VerifiedNetworks>!
     var follows: Bool?
     var thumbnail: String?
 }

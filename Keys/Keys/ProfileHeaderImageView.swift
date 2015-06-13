@@ -10,6 +10,7 @@ import UIKit
 
 class ProfileHeaderImageView: UIView {
 
+    @IBOutlet weak var username: UILabel!
     var thumbnailUrl: String! {
         didSet {
             let url = NSURL(string: thumbnailUrl)
@@ -28,7 +29,7 @@ class ProfileHeaderImageView: UIView {
         }
     }
 
-    @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var fullname: UILabel!
     override init(frame: CGRect) {
         super.init(frame: frame)
 

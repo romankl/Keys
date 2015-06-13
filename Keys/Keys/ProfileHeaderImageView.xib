@@ -7,8 +7,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileHeaderImageView" customModule="Keys" customModuleProvider="target">
             <connections>
                 <outlet property="backgroundImage" destination="pA8-u4-vWE" id="gEt-PP-OMe"/>
+                <outlet property="fullname" destination="gFi-Xd-bBf" id="Suh-XI-5FA"/>
                 <outlet property="profileImage" destination="f0K-gQ-mzC" id="Kqb-85-5Lw"/>
-                <outlet property="username" destination="gFi-Xd-bBf" id="Y90-vf-FIS"/>
+                <outlet property="username" destination="s8j-0Z-s2w" id="f7b-L2-BWc"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -32,16 +33,24 @@
                         <constraint firstAttribute="width" constant="120" id="rIQ-AS-sIw"/>
                     </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8j-0Z-s2w">
+                    <rect key="frame" x="283" y="397" width="35" height="17"/>
+                    <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="f0K-gQ-mzC" secondAttribute="centerX" id="2k9-NA-gC1"/>
                 <constraint firstAttribute="trailing" secondItem="pA8-u4-vWE" secondAttribute="trailing" id="2ok-ES-TzP"/>
                 <constraint firstAttribute="bottom" secondItem="pA8-u4-vWE" secondAttribute="bottom" id="AAP-Ih-OYt"/>
+                <constraint firstItem="gFi-Xd-bBf" firstAttribute="centerX" secondItem="s8j-0Z-s2w" secondAttribute="centerX" id="H6H-tD-KPU"/>
                 <constraint firstItem="pA8-u4-vWE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RSl-n5-eIE"/>
                 <constraint firstItem="f0K-gQ-mzC" firstAttribute="centerX" secondItem="gFi-Xd-bBf" secondAttribute="centerX" id="UEn-C2-YbJ"/>
                 <constraint firstItem="pA8-u4-vWE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VeT-TS-aoH"/>
                 <constraint firstAttribute="centerY" secondItem="f0K-gQ-mzC" secondAttribute="centerY" id="eTP-c3-wKH"/>
+                <constraint firstItem="s8j-0Z-s2w" firstAttribute="top" secondItem="gFi-Xd-bBf" secondAttribute="bottom" constant="8" id="soD-cJ-gMG"/>
                 <constraint firstItem="gFi-Xd-bBf" firstAttribute="top" secondItem="f0K-gQ-mzC" secondAttribute="bottom" constant="8" symbolic="YES" id="z2s-nF-hHX"/>
             </constraints>
         </view>
