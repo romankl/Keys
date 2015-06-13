@@ -49,6 +49,16 @@ class LocalKeyTableViewController: BaseFetchController, UISearchBarDelegate, UIS
     }
 
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == constants.detailSegue {
+            let destination = segue.destinationViewController as! LocalKeyDetailTableViewController
+            let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
+            let item = fetchedResultsController.objectAtIndexPath(indexPath!) as! Key
+            destination.detailKey = item
+        }
+    }
+
+
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             let item = fetchedResultsController.objectAtIndexPath(indexPath) as! Key
