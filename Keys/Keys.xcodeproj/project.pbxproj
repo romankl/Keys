@@ -146,19 +146,51 @@
 		3009916C1B21D5A100C9C4DF /* model */ = {
 			isa = PBXGroup;
 			children = (
+				3099B8891B2DF2F4007055F0 /* entities */,
+				3009916D1B21D5BC00C9C4DF /* LocalKey.swift */,
+				3009916F1B21D85900C9C4DF /* AllLocalKeys.swift */,
+				3099B88A1B2DF48E007055F0 /* remotes */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		3099B8891B2DF2F4007055F0 /* entities */ = {
+			isa = PBXGroup;
+			children = (
 				300991741B21DC2300C9C4DF /* Remote.h */,
 				300991751B21DC2300C9C4DF /* Remote.m */,
 				300991711B21DC2300C9C4DF /* Key.h */,
 				300991721B21DC2300C9C4DF /* Key.m */,
-				3009916D1B21D5BC00C9C4DF /* LocalKey.swift */,
-				3009916F1B21D85900C9C4DF /* AllLocalKeys.swift */,
+			);
+			name = entities;
+			sourceTree = "<group>";
+		};
+		3099B88A1B2DF48E007055F0 /* remotes */ = {
+			isa = PBXGroup;
+			children = (
+				3099B88B1B2DF49A007055F0 /* endpoints */,
+				3099B88C1B2DF4AD007055F0 /* objects */,
+			);
+			name = remotes;
+			sourceTree = "<group>";
+		};
+		3099B88B1B2DF49A007055F0 /* endpoints */ = {
+			isa = PBXGroup;
+			children = (
 				30AE85781B2314EF0061905E /* RemoteEndpoint.swift */,
 				30AE857C1B23196B0061905E /* EndpointProtocol.swift */,
 				30AE857A1B2318DA0061905E /* LookUpEndpoint.swift */,
+			);
+			name = endpoints;
+			sourceTree = "<group>";
+		};
+		3099B88C1B2DF4AD007055F0 /* objects */ = {
+			isa = PBXGroup;
+			children = (
 				3009B2661B248D8D00679729 /* RemoteUser.swift */,
 				3009B2681B248DD900679729 /* VerifiedNetworks.swift */,
 			);
-			name = model;
+			name = objects;
 			sourceTree = "<group>";
 		};
 		30B0DE9D1B1F8AD20086FF3F = {
