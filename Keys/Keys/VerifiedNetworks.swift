@@ -13,10 +13,12 @@ struct VerifiedNetworks {
     var type: NetworkType
     var username: String
 
+
     init(type: NetworkType, username: String) {
         self.type = type
         self.username = username
     }
+
 
     enum NetworkType {
         case Https
@@ -26,5 +28,31 @@ struct VerifiedNetworks {
         case Reddit
         case Coinbase
         case HackerNews
+    }
+
+
+    func mapNetworkToUrl() -> String {
+        var result: String 
+        switch type {
+        case .Reddit:
+            result = "https://reddit.com/u/"
+            break
+        case .Twitter:
+            result = "https://twitter.com/"
+            break
+        case .Github:
+            result = "https://github.com/"
+            break
+        case .HackerNews:
+            result = "https://news.ycombinator.com/user?id="
+            break
+        case .Coinbase:
+            result = "https://www.coinbase.com"
+            break
+        default:
+            return ""
+        }
+
+        return result
     }
 }
