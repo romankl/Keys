@@ -24,6 +24,8 @@ class LocalKeyTableViewController: BaseFetchController, UISearchBarDelegate, UIS
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+
         let all = AllLocalKeys(context: context)
         let request = all.requestForAllFetching()
 

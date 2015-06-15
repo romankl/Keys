@@ -63,7 +63,7 @@ struct VerifiedNetworks {
             result = "https://news.ycombinator.com/user?id="
             break
         case .Coinbase:
-            result = "https://www.coinbase.com"
+            result = "https://www.coinbase.com/"
             break
         default:
             return ""
