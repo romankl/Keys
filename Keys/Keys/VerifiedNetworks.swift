@@ -31,6 +31,22 @@ struct VerifiedNetworks {
     }
 
 
+    func mapNetworkToHumanName() -> String {
+        var result = "Verified through "
+        switch type {
+        case .Dns:
+            result += "DNS"
+            break
+        case .Https:
+            result += "HTTPS"
+        default:
+            result = ""
+        }
+
+        return result
+    }
+
+
     func mapNetworkToUrl() -> String {
         var result: String 
         switch type {

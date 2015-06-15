@@ -11,6 +11,7 @@ import UIKit
 class RemoteDetailProfileViewTableViewController: UITableViewController {
     private struct constants {
         static let cellIdentifier = "userData"
+        static let segueIdentifier = "websiteDetails"
     }
 
     var user: RemoteUser!
@@ -35,18 +36,19 @@ class RemoteDetailProfileViewTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var count = 0
-        if let networks = user.socialNetworks {
-            count += networks.count
+        if section == 0 {
+            if let networks = user.socialNetworks {
+                count += networks.count
+            }
+        } else {
+            count = 1
         }
 
-        if let sites = user.websites {
-            count++
-        }
 
         return count
     }
@@ -55,15 +57,18 @@ class RemoteDetailProfileViewTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(constants.cellIdentifier, forIndexPath: indexPath) as! UITableViewCell
 
-        if let networks = user.socialNetworks {
-            if indexPath.row == networks.count {
-                cell.textLabel?.text = "View verified websites"
-            } else {
+        if indexPath.section == 0 {
+            if let networks = user.socialNetworks {
                 let socialNetwork = networks[indexPath.row]
-                cell.textLabel?.text = socialNetwork.username
+                let socialUserName = socialNetwork.username
+
+                let socialProfileUrl = networks[indexPath.row].mapNetworkToUrl()
+                cell.textLabel?.text = socialProfileUrl + socialUserName
+                cell.accessoryType = .None
             }
-        } else if let websites = user.websites {
+        } else {
             cell.textLabel?.text = "View verified websites"
+            cell.accessoryType = .DisclosureIndicator
         }
 
         return cell
@@ -144,6 +149,13 @@ class RemoteDetailProfileViewTableViewController: UITableViewController {
         switchButtonToExistingLocalKey()
     }
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.cellForRowAtIndexPath(indexPath)?.selected = false
+        if indexPath.section == 1 {
+            performSegueWithIdentifier(constants.segueIdentifier, sender: self)
+        }
+    }
+
 
     @IBOutlet weak var keyActionsButton: UIButton!
     private func switchButtonToExistingLocalKey() {
@@ -160,6 +172,14 @@ class RemoteDetailProfileViewTableViewController: UITableViewController {
         var error: NSError?
         if !context.save(&error) {
             println("Error: \(error)")
+        }
+    }
+
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == constants.segueIdentifier {
+            let detail = segue.destinationViewController as! VerifiedWebsitesTableViewController
+            detail.networks = user.websites
         }
     }
 }
