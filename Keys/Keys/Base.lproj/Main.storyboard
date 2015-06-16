@@ -14,11 +14,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" placeholder="Search" id="wbe-cj-li9">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
-                                <outlet property="delegate" destination="RGd-9g-ABR" id="Oq9-S3-MtD"/>
+                                <outlet property="delegate" destination="CBN-4x-DOB" id="tEH-3y-qaC"/>
                             </connections>
                         </searchBar>
                         <prototypes>
@@ -71,6 +71,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="CBN-4x-DOB" id="7e0-Zc-QNM"/>
+                        <segue destination="RfX-yr-317" kind="show" identifier="searchKeySegue" id="MqH-NS-Uc2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ijj-AX-j4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -90,7 +91,7 @@
         <scene sceneID="ATw-ZY-de9">
             <objects>
                 <tableViewController id="RfX-yr-317" customClass="LocalKeyDetailTableViewController" customModule="Keys" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="s6e-tu-aNk">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="s6e-tu-aNk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
@@ -466,7 +467,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GBH-7v-uuE"/>
-        <segue reference="uhD-wA-xeY"/>
+        <segue reference="MqH-NS-Uc2"/>
+        <segue reference="Lkz-sm-Icv"/>
     </inferredMetricsTieBreakers>
 </document>

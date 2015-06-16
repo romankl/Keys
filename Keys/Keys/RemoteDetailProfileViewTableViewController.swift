@@ -159,12 +159,16 @@ class RemoteDetailProfileViewTableViewController: UITableViewController {
 
     @IBOutlet weak var keyActionsButton: UIButton!
     private func switchButtonToExistingLocalKey() {
-        keyActionsButton.setTitle("Remove key", forState: .Normal)
+        self.keyActionsButton.setTitle("Remove key", forState: .Normal)
+        self.keyActionsButton.backgroundColor = UIColor(red:255/255.0, green:69/255.0, blue:33/255.0, alpha:255/255.0)
+        self.keyActionsButton.tintColor = .whiteColor()
     }
 
 
     private func switchToNonExistingKey() {
-        keyActionsButton.setTitle("Save key", forState: .Normal)
+        self.keyActionsButton.setTitle("Save key", forState: .Normal)
+        self.keyActionsButton.backgroundColor = UIColor(red:0/255.0, green:159/255.0, blue:242/255.0, alpha:255/255.0)
+        self.keyActionsButton.tintColor = .whiteColor()
     }
 
 
