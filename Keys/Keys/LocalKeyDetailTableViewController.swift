@@ -107,7 +107,7 @@ class LocalKeyDetailTableViewController: UITableViewController, UITextFieldDeleg
 
 
     private func updateUi() {
-        switchBetweenDetailAndEdit(editingKey)
+        switchBetweenDetailAndEdit(editingKey || detailKey == nil)
 
         owner.text = detailKey?.owner
         fingerprint.text = detailKey?.fingerprint
