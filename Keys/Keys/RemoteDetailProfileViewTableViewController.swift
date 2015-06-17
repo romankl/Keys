@@ -19,6 +19,18 @@ class RemoteDetailProfileViewTableViewController: UITableViewController {
     private var profileHeaderImage: ProfileHeaderImageView!
     private var image = UIImage()
 
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        user.completeFromEndpoint { (error, result) -> Void in
+            if error != nil {
+                //TODO: Define a way to handle errors
+            } else {
+                self.user.publicKey = result
+            }
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
