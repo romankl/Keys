@@ -8,13 +8,15 @@
 
 import UIKit
 
-class ExploreKeysTableViewController: UITableViewController {
+class ExploreKeysTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate {
     private struct constants {
         static let cellIdentifier = "remoteKeyCell"
         static let segueIdentifier = "profileView"
     }
 
     private var items = [RemoteUser]()
+    private var filteredData = [RemoteUser]()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,19 +45,34 @@ class ExploreKeysTableViewController: UITableViewController {
 
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if tableView == searchDisplayController!.searchResultsTableView {
+            return filteredData.count
+        }
+
         return items.count
     }
 
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(constants.cellIdentifier, forIndexPath: indexPath) as! RemoteKeyCell
         let remoteUser = items[indexPath.row]
-        // cell.textLabel?.text = remoteUser.username
-        cell.thumbnail.setImageWithURL(NSURL(string: remoteUser.thumbnail!), placeholderImage: nil)
-        cell.titleLabel.text = remoteUser.fullName
-        cell.subTitleLabel.text = remoteUser.username
+        if tableView == searchDisplayController?.searchResultsTableView {
+            let cell = tableView.dequeueReusableCellWithIdentifier(constants.cellIdentifier, forIndexPath: indexPath) as! UITableViewCell
 
-        return cell
+            let item = filteredData[indexPath.row] as RemoteUser
+            cell.textLabel?.text = item.fullName
+
+            cell.accessoryType = .DisclosureIndicator
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCellWithIdentifier(constants.cellIdentifier, forIndexPath: indexPath) as! RemoteKeyCell
+
+            cell.accessoryType = .None
+
+            cell.thumbnail.setImageWithURL(NSURL(string: remoteUser.thumbnail!), placeholderImage: nil)
+            cell.titleLabel.text = remoteUser.fullName
+            cell.subTitleLabel.text = remoteUser.username
+            return cell
+        }
     }
 
 
@@ -67,6 +84,37 @@ class ExploreKeysTableViewController: UITableViewController {
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
+    }
+
+
+    private func searchRestEndpoin(search: String, displayTextView: UITableView) -> Void {
+        let endpoint = LookUpEndpoint()
+        endpoint.fetch({ (result, error) -> Void in
+            if error != nil {
+                println("Error while fetching \(error)")
+                return
+            }
+
+            self.filteredData = result!
+            displayTextView.reloadData()
+            }, params: ["q": search])
+    }
+
+
+    func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchString searchString: String!) -> Bool {
+        searchRestEndpoin(searchString, displayTextView: controller.searchResultsTableView)
+        return true
+    }
+
+
+    func searchDisplayControllerWillBeginSearch(controller: UISearchDisplayController) {
+        controller.searchResultsTableView.registerClass(LocalKeyTableViewCell.classForCoder(), forCellReuseIdentifier: constants.cellIdentifier)
+    }
+
+
+    func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
+        searchRestEndpoin(searchDisplayController!.searchBar.text, displayTextView: controller.searchResultsTableView)
+        return true
     }
 
 
