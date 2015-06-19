@@ -76,17 +76,6 @@ class ExploreKeysTableViewController: UITableViewController, UISearchBarDelegate
     }
 
 
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }
-    }
-
-
     private func searchRestEndpoin(search: String, displayTextView: UITableView) -> Void {
         let endpoint = LookUpEndpoint()
         endpoint.fetch({ (result, error) -> Void in
@@ -102,6 +91,10 @@ class ExploreKeysTableViewController: UITableViewController, UISearchBarDelegate
 
 
     func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchString searchString: String!) -> Bool {
+        if searchString.isEmpty {
+            return false
+        }
+
         searchRestEndpoin(searchString, displayTextView: controller.searchResultsTableView)
         return true
     }
@@ -113,6 +106,9 @@ class ExploreKeysTableViewController: UITableViewController, UISearchBarDelegate
 
 
     func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
+        if searchDisplayController!.searchBar.text.isEmpty {
+            return false
+        }
         searchRestEndpoin(searchDisplayController!.searchBar.text, displayTextView: controller.searchResultsTableView)
         return true
     }
