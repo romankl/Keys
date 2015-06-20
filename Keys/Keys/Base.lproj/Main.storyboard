@@ -195,6 +195,62 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Action" id="0Uj-zR-xyL">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="Hav-9l-0Dk">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hav-9l-0Dk" id="ljR-yB-68O">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUf-8A-1GI">
+                                                    <rect key="frame" x="8" y="8" width="584" height="27"/>
+                                                    <color key="backgroundColor" red="0.18823529411764706" green="0.71764705882352942" blue="0.64313725490196083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="Copy to Clipboard">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="copyToClipboardAction:" destination="RfX-yr-317" eventType="touchUpInside" id="XEd-9R-d3g"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.18823529410000001" green="0.71764705880000002" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="vUf-8A-1GI" firstAttribute="top" secondItem="ljR-yB-68O" secondAttribute="topMargin" id="PvY-1a-7cq"/>
+                                                <constraint firstItem="vUf-8A-1GI" firstAttribute="trailing" secondItem="ljR-yB-68O" secondAttribute="trailingMargin" id="iNm-UC-CVa"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="vUf-8A-1GI" secondAttribute="bottom" id="q8Y-Ey-Mxt"/>
+                                                <constraint firstItem="vUf-8A-1GI" firstAttribute="leading" secondItem="ljR-yB-68O" secondAttribute="leadingMargin" id="vAm-9B-Zc1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="yY2-x2-tCC">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yY2-x2-tCC" id="lDf-Ei-zTT">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Amw-fA-M2p">
+                                                    <rect key="frame" x="8" y="8" width="584" height="27"/>
+                                                    <color key="backgroundColor" red="1" green="0.27058823529411763" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="Delete Key">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="deleteKey:" destination="RfX-yr-317" eventType="touchUpInside" id="v5C-ZW-JFr"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="0.27058823529999998" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="Amw-fA-M2p" firstAttribute="leading" secondItem="lDf-Ei-zTT" secondAttribute="leadingMargin" id="IXA-VE-gFh"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Amw-fA-M2p" secondAttribute="bottom" id="OkP-nO-FC7"/>
+                                                <constraint firstItem="Amw-fA-M2p" firstAttribute="trailing" secondItem="lDf-Ei-zTT" secondAttribute="trailingMargin" id="Yzb-jB-UYG"/>
+                                                <constraint firstItem="Amw-fA-M2p" firstAttribute="top" secondItem="lDf-Ei-zTT" secondAttribute="topMargin" id="ksp-hD-r1D"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="RfX-yr-317" id="Giq-9d-Y1Z"/>
@@ -203,6 +259,10 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="S0s-36-Qes"/>
                     <connections>
+                        <outlet property="copyCell" destination="Hav-9l-0Dk" id="k9n-Ev-npu"/>
+                        <outlet property="copyToClipboard" destination="vUf-8A-1GI" id="gIM-AP-13q"/>
+                        <outlet property="deleteCell" destination="yY2-x2-tCC" id="Hex-TN-bmf"/>
+                        <outlet property="delteKey" destination="Amw-fA-M2p" id="vWD-WJ-l2G"/>
                         <outlet property="expireDate" destination="0FZ-Dw-H1a" id="LFZ-bm-oJF"/>
                         <outlet property="fingerprint" destination="RdU-dN-qbI" id="ZbG-iJ-qOq"/>
                         <outlet property="key" destination="gCX-7f-ZF7" id="1qn-eZ-kav"/>

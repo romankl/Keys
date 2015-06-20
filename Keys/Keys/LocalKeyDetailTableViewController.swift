@@ -97,13 +97,37 @@ class LocalKeyDetailTableViewController: UITableViewController, UITextFieldDeleg
         }
     }
 
+    @IBOutlet weak var copyCell: UITableViewCell!
+    @IBOutlet weak var deleteCell: UITableViewCell!
 
     private func switchBetweenDetailAndEdit(edit: Bool) {
         owner.userInteractionEnabled = edit
         fingerprint.userInteractionEnabled = edit
         key.userInteractionEnabled = edit
         expireDate.userInteractionEnabled = edit
+
+        if edit {
+            copyCell.hidden = true
+            deleteCell.hidden = true
+        }
     }
+
+    @IBOutlet weak var copyToClipboard: UIButton!
+    @IBOutlet weak var delteKey: UIButton!
+
+
+    @IBAction func copyToClipboardAction(sender: UIButton) {
+        UIPasteboard.generalPasteboard().string = detailKey?.content
+    }
+
+
+    @IBAction func deleteKey(sender: UIButton) {
+        context.deleteObject(detailKey!)
+        var error: NSError?
+        context.save(&error)
+        navigationController?.popToRootViewControllerAnimated(true)
+    }
+
 
 
     private func updateUi() {
